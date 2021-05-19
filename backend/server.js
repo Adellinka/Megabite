@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/megabite", {
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/megabite", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

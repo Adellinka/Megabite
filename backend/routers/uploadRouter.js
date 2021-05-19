@@ -25,12 +25,6 @@ const uploadMultiple = upload.fields([
 
 uploadRouter.post("/", uploadMultiple, isAuth, isAdmin, (req, res) => {
   if (req.files.nahled) {
-    console.log(
-      "/" +
-        req.files.nahled[0].path.substring(3, 10) +
-        "/" +
-        req.files.nahled[0].path.substring(11, req.files.nahled[0].path.length)
-    );
     res.send(
       "/" +
         req.files.nahled[0].path.substring(3, 10) +
@@ -39,15 +33,6 @@ uploadRouter.post("/", uploadMultiple, isAuth, isAdmin, (req, res) => {
     );
   }
   if (req.files.zakladni) {
-    console.log(
-      "/" +
-        req.files.zakladni[0].path.substring(3, 10) +
-        "/" +
-        req.files.zakladni[0].path.substring(
-          11,
-          req.files.zakladni[0].path.length
-        )
-    );
     res.send(
       "/" +
         req.files.zakladni[0].path.substring(3, 10) +
