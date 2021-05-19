@@ -10,6 +10,7 @@ import pubgAboutScreen from "./screen/pubg/pubgAbout";
 import pubgMapsScreen from "./screen/pubg/pubgMaps";
 import pubgMapDetailScreen from "./screen/pubg/pubgMapDetailScreen";
 import valorantScreen from "./screen/valorant/valorantScreen";
+import valorantAbout from "./screen/valorant/valorantAbout";
 import valorantChamps from "./screen/valorant/valorantChamps";
 import valorantChampDetailScreen from "./screen/valorant/valorantChampDetailScreen";
 import createValorantChampScreen from "./screen/valorant/createValorantChampScreen";
@@ -48,6 +49,7 @@ function App() {
               <Route path="/pubgAbout" component={pubgAboutScreen}></Route>
               <Route path="/pubgMaps" component={pubgMapsScreen} exact></Route>
               <Route path="/valorant" component={valorantScreen}></Route>
+              <Route path="/valorantAbout" component={valorantAbout}></Route>
               <Route
                 path="/valorantChamps"
                 component={valorantChamps}

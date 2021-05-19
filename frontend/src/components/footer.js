@@ -47,6 +47,7 @@ export default function Footer() {
       break;
 
     case "/valorant":
+    case "/valorantAbout":
     case "/valorantChamps":
     case `/valorantChamps/${valorantChamp ? valorantChamp._id : ""}/`:
     case `/valorantChamps/${valorantChamp ? valorantChamp._id : ""}`:

@@ -49,6 +49,7 @@ export default function Header(props) {
       headerColor = "#e0ca5e";
       break;
     case "/valorant":
+    case "/valorantAbout":
     case "/valorantChamps":
     case `/valorantChamps/${valorantChamp ? valorantChamp._id : ""}/`:
     case `/valorantChamps/${valorantChamp ? valorantChamp._id : ""}`:

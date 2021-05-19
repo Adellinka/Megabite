@@ -25,7 +25,12 @@ export default function ValorantChamps(props) {
           <ul className="sidemenu val-border">
             <li>
               <Link className="link" to="/valorant">
-                MAIN
+                ZPĚT
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="/valorantAbout">
+                O HŘE
               </Link>
             </li>
           </ul>

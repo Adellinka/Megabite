@@ -25,7 +25,12 @@ export default function LolChamps(props) {
           <ul className="sidemenu lol-border">
             <li>
               <Link className="link" to="/lol">
-                MAIN
+                ZPĚT
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="/lolAbout">
+                O HŘE
               </Link>
             </li>
           </ul>

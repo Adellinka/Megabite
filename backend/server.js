@@ -20,6 +20,8 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/megabite", {
   useCreateIndex: true,
 });
 
+// fasdf dssf
+
 app.use("/api/uploads", uploadRouter);
 app.use("/api/users", userRouter);
 app.use("/api/pubgMaps", pubgRouter);

@@ -13,7 +13,12 @@ export default function valorantScreen() {
         <div className="left-menu-wrap">
           <ul className="sidemenu val-border">
             <li>
-              <Link className="link" to="valorantChamps">
+              <Link className="link" to="/valorantAbout">
+                O HŘE
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="/valorantChamps">
                 ŠAMPIONI
               </Link>
             </li>
