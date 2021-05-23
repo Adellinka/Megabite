@@ -140,7 +140,7 @@ export default function Header(props) {
         </div>
         <ul className="menu-links">
           <li>
-            <Link to="/">DOMOVSKÁ STRÁNKA</Link>
+            <Link to="/">DOMŮ</Link>
           </li>
           <li>
             {" "}

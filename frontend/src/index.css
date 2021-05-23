@@ -56,6 +56,7 @@ body {
   justify-content: center;
 }
 .header a {
+  font-family: "Audiowide", cursive;
   color: #ffffff;
   padding: 10px;
 }
@@ -360,6 +361,8 @@ h2 {
   font-family: "Audiowide", cursive;
 }
 button {
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
   background: inherit;
   border: none;
   color: white;
@@ -398,19 +401,20 @@ button:hover {
   position: relative;
 }
 .dropdown-content {
+  font-family: "Quicksand", sans-serif;
   position: absolute;
   display: none;
   right: 0;
   min-width: 120px;
-  padding: 10px;
+  padding-bottom: 10px;
   z-index: 1;
-  background-color: #203040;
+  background-color: #555555;
   margin: 0;
-  margin-top: 4px;
-  border-radius: 5px;
+  margin-top: 5px;
+  border-radius: 2px;
 }
 .dropdown-cart {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px solid black;
 }
 
@@ -445,7 +449,6 @@ div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*  */
 }
 .grid-form-container {
   display: grid;
@@ -562,6 +565,10 @@ div {
   img.big {
     max-width: 400px;
   }
+  img.nahled {
+    width: 100px;
+    height: 150px;
+  }
   .burger-menu {
     display: block;
     position: relative;
@@ -579,7 +586,7 @@ div {
     min-width: 120px;
     padding: 10px;
     z-index: 1;
-    background-color: #203040;
+    background-color: #555555;
     margin: 0;
     margin-top: 4px;
     border-radius: 5px;
@@ -588,6 +595,15 @@ div {
 
   .burger-menu:hover .menu-links {
     display: block;
+  }
+  .modal-main {
+    position: fixed;
+    background: white;
+    width: 450px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .video {
     height: 180px;
@@ -613,6 +629,14 @@ div {
   .val-border,
   .val-border > li {
     border-color: #ff4761;
+  }
+
+  .mapDetailContent {
+    display: block;
+  }
+  .sliderDetail {
+    max-width: 340px;
+    width: 100%;
   }
 }
 @media (min-width: 601px) and (max-width: 1000px) {
@@ -642,7 +666,7 @@ div {
     min-width: 120px;
     padding: 10px;
     z-index: 1;
-    background-color: #203040;
+    background-color: #555555;
     margin: 0;
     margin-top: 4px;
     border-radius: 5px;
@@ -654,6 +678,10 @@ div {
   }
   .video {
     height: 210px;
+  }
+  img.nahled {
+    width: 120px;
+    height: 180px;
   }
   .sidemenu > li {
     background-color: #1a1a1a;
@@ -676,6 +704,13 @@ div {
   .val-border,
   .val-border > li {
     border-color: #ff4761;
+  }
+  .sliderDetail {
+    max-width: 450px;
+    width: 100%;
+  }
+  .mapDetailContent {
+    display: block;
   }
 }
 @media (min-width: 1001px) and (max-width: 1500px) {

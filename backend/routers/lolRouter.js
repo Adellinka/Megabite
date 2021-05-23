@@ -17,7 +17,7 @@ lolRouter.get(
 lolRouter.get(
   "/data",
   expressAsyncHandler(async (req, res) => {
-    //await Lol.remove({});
+    await Lol.remove({});
     const createdChamps = await Lol.insertMany(data.lolChamps); //data = data.js
     res.send({ createdChamps });
   })

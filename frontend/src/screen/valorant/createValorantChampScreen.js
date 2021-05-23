@@ -82,17 +82,17 @@ export default function CreateValorantChampScreen(props) {
       </div>
       <div className="grid-form-container">
         <div className="form-nadpis">
-          <h3>Create New Champion</h3>
+          <h3>Vytvoř nového šampiona</h3>
         </div>
         <form className="form" onSubmit={submitHandler}>
           {loading && <LoadingBox></LoadingBox>}
           {error && <MessageBox variant="danger">{error}</MessageBox>}
           <div>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Jméno šampiona</label>
             <input
               type="text"
               id="name"
-              placeholder="Enter name"
+              placeholder="Zadejte jméno"
               required
               onChange={(e) => setName(e.target.value)}
             ></input>
@@ -121,11 +121,11 @@ export default function CreateValorantChampScreen(props) {
               <MessageBox variant="danger">{errorUpload}</MessageBox>
             )}
 
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">Popis šampiona</label>
             <input
               type="text"
               id="description"
-              placeholder="Enter description"
+              placeholder="Vložte popis"
               required
               onChange={(e) => setDescription(e.target.value)}
             ></input>

@@ -17,7 +17,7 @@ valorantRouter.get(
 valorantRouter.get(
   "/data",
   expressAsyncHandler(async (req, res) => {
-    // await Valorant.remove({});
+    await Valorant.remove({});
     const createdChamps = await Valorant.insertMany(data.valorantChamps);
     res.send({ createdChamps });
   })

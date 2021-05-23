@@ -114,17 +114,17 @@ export default function CreateLolChampScreen(props) {
       </div>
       <div className="grid-form-container">
         <div className="form-nadpis">
-          <h3 className="center-align">Create New Champion</h3>
+          <h3 className="center-align">Vytvoř nového šampiona</h3>
         </div>
         <form className="form" onSubmit={submitHandler}>
           {loading && <LoadingBox></LoadingBox>}
           {error && <MessageBox variant="danger">{error}</MessageBox>}
           <div>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Jméno šampiona</label>
             <input
               type="text"
               id="name"
-              placeholder="Enter name"
+              placeholder="Zadejte jméno"
               required
               onChange={(e) => setName(e.target.value)}
             ></input>
@@ -132,10 +132,10 @@ export default function CreateLolChampScreen(props) {
             <input
               type="text"
               id="nadpis"
-              placeholder="Enter nadpis"
+              placeholder="Vložte nadpis"
               onChange={(e) => setNadpis(e.target.value)}
             ></input>
-            <label htmlFor="nahledFile">Nahled File</label>
+            <label htmlFor="nahledFile">Náhledový obrázek</label>
             <input
               name="nahled"
               type="file"
@@ -147,7 +147,7 @@ export default function CreateLolChampScreen(props) {
             {errorUpload && (
               <MessageBox variant="danger">{errorUpload}</MessageBox>
             )}
-            <label htmlFor="zakladniFile">Zakladni File</label>
+            <label htmlFor="zakladniFile">Základní obrázek</label>
             <input
               name="zakladni"
               type="file"
@@ -159,7 +159,7 @@ export default function CreateLolChampScreen(props) {
             {errorUpload && (
               <MessageBox variant="danger">{errorUpload}</MessageBox>
             )}
-            <label htmlFor="skinFile">Skin File</label>
+            <label htmlFor="skinFile">Další obrázky (lze vybrat víc)</label>
             <input
               multiple
               name="skin"
@@ -172,10 +172,10 @@ export default function CreateLolChampScreen(props) {
             {errorUpload && (
               <MessageBox variant="danger">{errorUpload}</MessageBox>
             )}
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">Popis šampiona</label>
             <textarea
               id="description"
-              placeholder="Enter description"
+              placeholder="Vložte popis"
               required
               rows="6"
               columns="60"
