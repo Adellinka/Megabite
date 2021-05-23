@@ -42,16 +42,16 @@ function ModalRegister(props) {
           </button>
         </div>
         <div className="grid-form-container">
-          <h2 className="h2-modal">Sign In</h2>
+          <h2 className="h2-modal">Registrace</h2>
           <form className="form" onSubmit={submitHandler}>
             {loading && <LoadingBox></LoadingBox>}
             {error && <MessageBox variant="danger">{error}</MessageBox>}
             <div>
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">Jméno</label>
               <input
                 type="text"
                 id="name"
-                placeholder="Enter name"
+                placeholder="Zadejte jméno"
                 required
                 onChange={(e) => setName(e.target.value)}
               />
@@ -59,23 +59,23 @@ function ModalRegister(props) {
               <input
                 type="text"
                 id="email"
-                placeholder="Enter email"
+                placeholder="Zadejte email"
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Heslo</label>
               <input
                 type="password"
                 id="password"
-                placeholder="Enter password"
+                placeholder="Zadejte heslo"
                 required
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <label htmlFor="confirmPassword">Password</label>
+              <label htmlFor="confirmPassword">Heslo znovu</label>
               <input
                 type="password"
                 id="confirmPassword"
-                placeholder="Enter confirm password"
+                placeholder="Zadejte heslo znovu"
                 required
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />

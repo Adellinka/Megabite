@@ -30,7 +30,7 @@ function Modal(props) {
           </button>
         </div>
         <div className="grid-form-container">
-          <h2 className="h2-modal">Sign In</h2>
+          <h2 className="h2-modal">Přihlášení</h2>
           <form className="form" onSubmit={submitHandler}>
             {loading && <LoadingBox></LoadingBox>}
             {error && <MessageBox variant="danger">{error}</MessageBox>}
@@ -39,15 +39,15 @@ function Modal(props) {
               <input
                 type="text"
                 id="email"
-                placeholder="email"
+                placeholder="Zadejte email"
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Heslo</label>
               <input
                 type="password"
                 id="password"
-                placeholder="password"
+                placeholder="Zadejte heslo"
                 required
                 onChange={(e) => setPassword(e.target.value)}
               />

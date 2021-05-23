@@ -27,6 +27,10 @@ export default function valorantScreen() {
         <div className="sidemenu-border val-border grid-item">
           <div className="col">
             <h2>O HŘE</h2>
+            <object
+              className="video"
+              data="https://www.youtube.com/embed/OgNEnFJNiGE"
+            ></object>
             <p>
               Valorant je taktická online střílečka od studia Riot Games, tvůrců
               letitého trháku League of Legends. Výzkum a vývoj hry započal v
@@ -34,10 +38,6 @@ export default function valorantScreen() {
               má našlápnuto na to, stát se jednou z nejoblíbenějších
               kompetitivních her.{" "}
             </p>
-            <object
-              className="object-size"
-              data="https://www.youtube.com/embed/OgNEnFJNiGE"
-            ></object>
           </div>
           <div className="col">
             <h2>PRŮBĚH HRY</h2>

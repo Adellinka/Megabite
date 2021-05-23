@@ -63,6 +63,14 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
+.nazev-menu {
+  display: flex;
+  color: white;
+  position: absolute;
+  padding-left: 60px;
+  font-family: "Audiowide", cursive;
+  font-size: 30px;
+}
 .col {
   width: 45%;
   margin: 20px;
@@ -105,7 +113,7 @@ body {
   height: 100px;
   display: flex !important;
   align-items: center;
-  font-size: 40px;
+  font-size: 37px;
   margin: 0;
 }
 
@@ -151,6 +159,11 @@ img.medium {
 img.small {
   max-width: 50px;
   width: 100%;
+}
+.video {
+  width: 100%;
+
+  height: 330px;
 }
 ul li {
   display: inline-block !important;
@@ -535,6 +548,9 @@ div {
   .col-1 {
     width: 100%;
   }
+  .col {
+    width: 100%;
+  }
   h2 {
     font-size: 17px;
   }
@@ -572,5 +588,120 @@ div {
 
   .burger-menu:hover .menu-links {
     display: block;
+  }
+  .video {
+    height: 180px;
+  }
+  .sidemenu > li {
+    background-color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    height: 70px;
+    display: flex !important;
+    align-items: center;
+    font-size: 10px;
+    margin: 0;
+  }
+  .lol-border,
+  .lol-border > li {
+    border-color: #00eeff;
+  }
+  .pubg-border,
+  .pubg-border > li {
+    border-color: #e0ca5e;
+  }
+  .val-border,
+  .val-border > li {
+    border-color: #ff4761;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  .main-nadpis {
+    font-size: 80px;
+  }
+  .col-1 {
+    width: 100%;
+  }
+  .col {
+    width: 100%;
+  }
+  .burger-menu {
+    display: block;
+    position: relative;
+  }
+  .burger-menu > div > svg {
+    margin-right: 20px;
+  }
+  .visible-menu {
+    display: none;
+  }
+  .burger-menu .menu-links {
+    position: absolute;
+    display: none;
+    right: 0;
+    min-width: 120px;
+    padding: 10px;
+    z-index: 1;
+    background-color: #203040;
+    margin: 0;
+    margin-top: 4px;
+    border-radius: 5px;
+    z-index: 15;
+  }
+
+  .burger-menu:hover .menu-links {
+    display: block;
+  }
+  .video {
+    height: 210px;
+  }
+  .sidemenu > li {
+    background-color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    height: 70px;
+    display: flex !important;
+    align-items: center;
+    font-size: 14px;
+    margin: 0;
+  }
+  .lol-border,
+  .lol-border > li {
+    border-color: #00eeff;
+  }
+  .pubg-border,
+  .pubg-border > li {
+    border-color: #e0ca5e;
+  }
+  .val-border,
+  .val-border > li {
+    border-color: #ff4761;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1500px) {
+  .col {
+    width: 100%;
+  }
+  .sidemenu > li {
+    background-color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    height: 80px;
+    display: flex !important;
+    align-items: center;
+    font-size: 22px;
+    margin: 0;
+  }
+  .lol-border,
+  .lol-border > li {
+    border-color: #00eeff;
+  }
+  .pubg-border,
+  .pubg-border > li {
+    border-color: #e0ca5e;
+  }
+  .val-border,
+  .val-border > li {
+    border-color: #ff4761;
   }
 }

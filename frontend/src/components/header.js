@@ -66,9 +66,11 @@ export default function Header(props) {
       <div>
         <img className="small" src="./images/blackwhite1.png" alt="logo"></img>
       </div>
+      <div className="nazev-menu">MEGABITE</div>
+
       {/* Menu */}
       <div className="visible-menu">
-        <Link to="/">HOME</Link>
+        <Link to="/">DOMŮ</Link>
         <Link to="/lol">LOL</Link>
         <Link to="/pubg">PUBG</Link>
         <Link to="/valorant">VALORANT</Link>
@@ -82,7 +84,7 @@ export default function Header(props) {
             <ul className="dropdown-content">
               <li>
                 <Link to="#signout" onClick={signoutHandler}>
-                  Sign Out
+                  Odhlásit se
                 </Link>
               </li>
             </ul>
@@ -96,11 +98,11 @@ export default function Header(props) {
             </Link>
             <ul className="dropdown-content">
               <li className="dropdown-cart">
-                <Link to="/createData">Create Data</Link>
+                <Link to="/createData">Tvorba</Link>
               </li>
               <li>
                 <Link to="#signout" onClick={signoutHandler}>
-                  Sign Out
+                  Odhlásit se
                 </Link>
               </li>
             </ul>
@@ -116,7 +118,7 @@ export default function Header(props) {
               }}
             ></ModalRegister>
             <button type="button" onClick={() => setRegisterShow(true)}>
-              Register
+              Registrace
             </button>
           </div>
           <div>
@@ -127,7 +129,7 @@ export default function Header(props) {
               }}
             ></ModalLogin>
             <button type="button" onClick={() => setShow(true)}>
-              Sign In
+              Přihlásit se
             </button>
           </div>
         </div>
@@ -138,7 +140,7 @@ export default function Header(props) {
         </div>
         <ul className="menu-links">
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/">DOMOVSKÁ STRÁNKA</Link>
           </li>
           <li>
             {" "}
@@ -167,7 +169,7 @@ export default function Header(props) {
                   }}
                 ></ModalRegister>
                 <button type="button" onClick={() => setRegisterShow(true)}>
-                  Register
+                  Registrace
                 </button>
               </div>
               <div>
@@ -178,7 +180,7 @@ export default function Header(props) {
                   }}
                 ></ModalLogin>
                 <button type="button" onClick={() => setShow(true)}>
-                  Sign In
+                  Přihlásit se
                 </button>
               </div>
             </li>

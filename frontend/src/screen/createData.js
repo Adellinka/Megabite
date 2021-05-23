@@ -7,10 +7,10 @@ export default function CreateData() {
       {/* <Link to="/createPubgMap">Create Pubg Map</Link> */}
       <ul className="menuCreate">
         <li>
-          <Link to="/CreateLolChamp">ADD LOL CHAMP</Link>
+          <Link to="/CreateLolChamp">PŘIDAT LOL ŠAMPIONA</Link>
         </li>
         <li>
-          <Link to="/createValorantChamp">ADD VALORANT CHAMP</Link>
+          <Link to="/createValorantChamp">PŘIDAT VALORANT ŠAMPIONA</Link>
         </li>
       </ul>
     </div>
