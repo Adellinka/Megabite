@@ -7,7 +7,7 @@ export default function lolAbout() {
       <div className="row"></div>
 
       <div className="row row-content lol-border mt-50">
-        <img className="big" src="./images/pubg3.png" alt="PUBG logo" />
+        <img className="big" src="./images/logolol.png" alt="PUBG logo" />
       </div>
       <div className="grid-container-content">
         <div className="left-menu-wrap">
