@@ -23,9 +23,18 @@ export default function LolChampDetail(props) {
   let structuredData = []; // let = proměnná
   let images = null;
   let sliderIndex = null;
+  let showSlides = 11;
+  const windowWidth = window.screen.availWidth;
 
   if (lolChamps) {
     sliderIndex = lolChamps.findIndex((x) => x._id === lolChampId);
+  }
+
+  if (windowWidth <= 600) {
+    showSlides = 1;
+  }
+  if (windowWidth > 600 && windowWidth <= 1000) {
+    showSlides = 5;
   }
 
   if (lolChamp) {
@@ -60,10 +69,9 @@ export default function LolChampDetail(props) {
           ) : (
             <Slider
               className="slider"
-              slidesToShow={11}
+              slidesToShow={showSlides}
               initialSlide={sliderIndex}
               centerMode={true}
-              adaptiveHeight={true}
             >
               {lolChamps.map((lolChamp) => (
                 <div key={lolChamp._id} className="menu-cart">

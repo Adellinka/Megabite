@@ -10,6 +10,7 @@ import { signout } from "../actions/userActions";
 export default function Header(props) {
   const [show, setShow] = useState(false);
   const [registerShow, setRegisterShow] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
@@ -58,6 +59,16 @@ export default function Header(props) {
     default:
       headerColor = "black";
   }
+
+  const showMenuHandler = () => {
+    console.log(showMenu);
+    if (showMenu) {
+      setShowMenu(false);
+    } else {
+      setShowMenu(true);
+    }
+    console.log("test" + showMenu);
+  };
   return (
     <div
       className="row row-header header"
@@ -135,57 +146,114 @@ export default function Header(props) {
         </div>
       )}
       <div className="burger-menu">
-        <div>
+        <button
+          className="burger-button"
+          type="button"
+          onClick={showMenuHandler}
+        >
           <FontAwesomeIcon icon={faBars} />
-        </div>
-        <ul className="menu-links">
-          <li>
-            <Link to="/">DOMŮ</Link>
-          </li>
-          <li>
-            {" "}
-            <Link to="/lol">LOL</Link>
-          </li>
-          <li>
-            {" "}
-            <Link to="/pubg">PUBG</Link>
-          </li>
-          <li>
-            {" "}
-            <Link to="/valorant">VALORANT</Link>
-          </li>
-          <li className="line"></li>
-          {userInfo && userInfo.isAdmin ? (
+        </button>
+        {userInfo && userInfo.isAdmin ? (
+          <ul className={showMenu ? "menu-links display-links" : "menu-links"}>
             <li>
-              <Link to="create-data"></Link>
+              <Link to="/">DOMŮ</Link>
             </li>
-          ) : (
             <li>
-              <div>
-                <ModalRegister
-                  registerShow={registerShow}
-                  handleClose={() => {
-                    setRegisterShow(false);
-                  }}
-                ></ModalRegister>
-                <button type="button" onClick={() => setRegisterShow(true)}>
-                  Registrace
-                </button>
-              </div>
-              <div>
-                <ModalLogin
-                  show={show}
-                  handleClose={() => {
-                    setShow(false);
-                  }}
-                ></ModalLogin>
-                <button type="button" onClick={() => setShow(true)}>
-                  Přihlásit se
-                </button>
-              </div>
+              {" "}
+              <Link to="/lol">LOL</Link>
             </li>
-          )}
-        </ul>
+            <li>
+              {" "}
+              <Link to="/pubg">PUBG</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/valorant">VALORANT</Link>
+            </li>
+            <li>
+              <Link to="/createData">Tvorba</Link>
+            </li>
+            <li className="line"></li>
+            <li>
+              <Link to="#signout" onClick={signoutHandler}>
+                Odhlásit se
+              </Link>
+            </li>
+          </ul>
+        ) : userInfo && !userInfo.isAdmin ? (
+          <ul className={showMenu ? "menu-links display-links" : "menu-links"}>
+            <li>
+              <Link to="/">DOMŮ</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/lol">LOL</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/pubg">PUBG</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/valorant">VALORANT</Link>
+            </li>
+            <li className="line"></li>
+            <li>
+              <Link to="#signout" onClick={signoutHandler}>
+                Odhlásit se
+              </Link>
+            </li>
+          </ul>
+        ) : (
+          <ul className={showMenu ? "menu-links display-links" : "menu-links"}>
+            <li>
+              <Link to="/">DOMŮ</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/lol">LOL</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/pubg">PUBG</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/valorant">VALORANT</Link>
+            </li>
+            <li className="line"></li>
+            <li>
+              <ModalRegister
+                registerShow={registerShow}
+                handleClose={() => {
+                  setRegisterShow(false);
+                }}
+              ></ModalRegister>
+              <button
+                className="menu-button"
+                type="button"
+                onClick={() => setRegisterShow(true)}
+              >
+                Registrace
+              </button>
+            </li>
+            <li>
+              <ModalLogin
+                show={show}
+                handleClose={() => {
+                  setShow(false);
+                }}
+              ></ModalLogin>
+              <button
+                className="menu-button"
+                type="button"
+                onClick={() => setShow(true)}
+              >
+                Přihlásit se
+              </button>
+            </li>
+          </ul>
+        )}
       </div>
     </div>
   );

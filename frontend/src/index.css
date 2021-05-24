@@ -206,12 +206,12 @@ img.nahled {
 img.nahled:hover {
   filter: brightness(120%);
 }
-.pubg-nahled {
-  width: 300px !important;
-  height: 480px !important;
+img.pubg-nahled {
+  width: 300px;
+  height: 480px;
   filter: saturate(150%);
 }
-.pubg-nahled:hover {
+img.pubg-nahled:hover {
   filter: brightness(120%);
 }
 .w-100 {
@@ -319,6 +319,10 @@ input {
   border: 1px solid rgba(78, 68, 68, 0.6);
   border-radius: 30%;
 }
+.menu-button {
+  font-family: "Audiowide", cursive !important;
+}
+
 .footer {
   width: 100%;
   text-align: center;
@@ -418,6 +422,10 @@ button:hover {
   border-bottom: 1px solid black;
 }
 
+.line {
+  border-bottom: 1px solid black;
+}
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -475,6 +483,12 @@ div {
   height: 50px;
   border: none !important;
   color: black;
+}
+.burger-button {
+  width: 60px;
+  height: 60px;
+  border: none !important;
+  color: white;
 }
 .button-wrapper {
   display: flex;
@@ -593,9 +607,14 @@ div {
     z-index: 15;
   }
 
-  .burger-menu:hover .menu-links {
-    display: block;
+  .line {
+    border-bottom: 1px solid black;
   }
+
+  .display-links {
+    display: block !important;
+  }
+
   .modal-main {
     position: fixed;
     background: white;
@@ -635,8 +654,11 @@ div {
     display: block;
   }
   .sliderDetail {
-    max-width: 340px;
+    max-width: 260px;
     width: 100%;
+  }
+  .mapName {
+    font-size: 50px;
   }
 }
 @media (min-width: 601px) and (max-width: 1000px) {
@@ -673,8 +695,8 @@ div {
     z-index: 15;
   }
 
-  .burger-menu:hover .menu-links {
-    display: block;
+  .display-links {
+    display: block !important;
   }
   .video {
     height: 210px;
@@ -682,6 +704,11 @@ div {
   img.nahled {
     width: 120px;
     height: 180px;
+  }
+  img.pubg-nahled {
+    width: 190px;
+    height: 310px;
+    filter: saturate(150%);
   }
   .sidemenu > li {
     background-color: #1a1a1a;

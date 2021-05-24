@@ -14,6 +14,18 @@ export default function PubgMapDetail(props) {
   const mapsList = useSelector((state) => state.mapsList);
   const { loading: loadingPubgMaps, error: errorPubgMaps, pubgMaps } = mapsList;
 
+  let sliderIndex = null;
+  let showSlides = 5;
+  const windowWidth = window.screen.availWidth;
+
+  if (pubgMaps) {
+    sliderIndex = pubgMaps.findIndex((x) => x._id === pubgMapId); // valorantChamps[_id = 60a52a4fe51c4124443cf33d, ...] hledání pozice
+  }
+
+  if (windowWidth <= 600) {
+    showSlides = 1;
+  }
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -33,9 +45,9 @@ export default function PubgMapDetail(props) {
           ) : (
             <Slider
               className="slider"
-              slidesToShow={5}
+              slidesToShow={showSlides}
+              initialSlide={sliderIndex}
               centerMode={true}
-              adaptiveHeight={true}
             >
               {pubgMaps.map((pubgMap) => (
                 <div key={pubgMap._id} className="menu-cart">

@@ -24,9 +24,18 @@ export default function ValorantChampDetail(props) {
   } = valorantChampList;
 
   let sliderIndex = null;
+  let showSlides = 11;
+  const windowWidth = window.screen.availWidth;
 
   if (valorantChamps) {
     sliderIndex = valorantChamps.findIndex((x) => x._id === valorantChampId); // valorantChamps[_id = 60a52a4fe51c4124443cf33d, ...] hledání pozice
+  }
+
+  if (windowWidth <= 600) {
+    showSlides = 1;
+  }
+  if (windowWidth > 600 && windowWidth <= 1000) {
+    showSlides = 5;
   }
 
   const dispatch = useDispatch();
@@ -48,10 +57,9 @@ export default function ValorantChampDetail(props) {
           ) : (
             <Slider
               className="slider"
-              slidesToShow={10}
+              slidesToShow={showSlides}
               initialSlide={sliderIndex}
               centerMode={true}
-              adaptiveHeight={true}
             >
               {valorantChamps.map((valorantChamp) => (
                 <div key={valorantChamp._id} className="menu-cart">
